@@ -11,6 +11,7 @@ const fn = () => {
 }
 
 console.log(fn)
+console.log(fn)
 
 function App() {
   const [count, setCount] = useState(0)
