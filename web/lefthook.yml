@@ -1,12 +1,12 @@
 pre-commit:
   parallel: false
-  jobs:
-    - name: lint
+  commands:
+    lint:
       glob: '*.{js,jsx,ts,tsx}'
-      run: npx oxlint --fix {staged_files}
+      run: npx oxlint --fix --no-error-on-unmatched-pattern {staged_files}
       stage_fixed: true
 
-    - name: fmt
+    fmt:
       glob: '*'
       run: npx oxfmt --write --no-error-on-unmatched-pattern {staged_files}
       stage_fixed: true
